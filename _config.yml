@@ -142,7 +142,7 @@ facebook:
   username               :
   app_id                 :
   publisher              :
-og_image                 :  # Social media default site image
+og_image                 : og-image.png   # Social media default site image (lives in /images/)
 og_description           :  # Social media default site image description
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
@@ -211,6 +211,7 @@ kramdown:
   input: GFM
   hard_wrap: false
   auto_ids: true
+  header_links: true
   footnote_nr: 1
   entity_output: as_char
   toc_levels: 1..6
@@ -356,5 +357,6 @@ tag_archive:
 # - https://jch.penibelst.de/
 compress_html:
   clippings: all
+  comments: ["<!-- ", " -->"]
   ignore:
     envs: development

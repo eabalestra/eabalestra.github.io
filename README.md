@@ -10,7 +10,7 @@
 1. On the "New repository" page, enter your public repository name as "[your GitHub username].github.io", which will also be your website's URL.
 1. Edit site-wide configuration in `_config.yml` and double check that the `url` is the one that you just selected in the previous step and that `repository` reflects the correct path for your repository.
 1. Add your site content, upload any files (like PDFs, .zip files, etc.) to the `files/` directory. They will appear at https://[your GitHub username].github.io/files/example.pdf.
-1. Check status by going to the repository settings, in the "GitHub pages" section
+1. Check status by going to the repository settings, under: Settings -> Pages -> Source: GitHub Actions
 1. (Optional) Use the Jupyter notebooks or python scripts in the `markdown_generator` folder to generate markdown files for publications and talks from a TSV file.
 
 See more info at https://academicpages.github.io/
@@ -53,6 +53,8 @@ When you are initially working on your website, it is very useful to be able to 
     bundle config set --local path 'vendor/bundle'
     ```
     then try run `bundle install` again. If succeeded, you should see a folder called `vendor` and `.bundle`.
+
+1. Run `npm run build` to generate the minimized version of the JavaScript files used by the template. This command will create the file `assets/js/main.min.js`, which is excluded from the repository in favor of building the minimized JavaScript on GitHub as part of the deployment process.
 
 1. Run `jekyll serve -l -H localhost` to generate the HTML and serve it from `localhost:4000` the local server will automatically rebuild and refresh the pages on change to Markdown (*.md) and HTML files, while changes to the core template and configuration (i.e., `_config.yml`) will require stopping and restarting Jekyll.
     You may also try `bundle exec jekyll serve -l -H localhost` to ensure jekyll to use specific dependencies on your own local machine.
